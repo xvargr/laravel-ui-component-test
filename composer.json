@@ -1,0 +1,27 @@
+{
+    "name": "cxs/ui-kit",
+    "type": "library",
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cxs\\UiKit\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cxs\\UiKit\\UiKitServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "akmal",
+            "email": "akmal@cxsanalytics.com"
+        }
+    ]
+}
