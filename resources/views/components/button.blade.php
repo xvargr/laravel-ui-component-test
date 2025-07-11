@@ -3,6 +3,6 @@
   'disabled' => false
 ])
 
-<button type="button" {{ $attributes->merge(['class' => "btn btn-{$variation}"]) }} {{ $disabled ? 'disabled' : '' }}>
+<button type="button" {{ $attributes->merge(['class' => "btn btn-{$variant}"]) }} {{ $disabled ? 'disabled' : '' }}>
   {{ $slot }}
 </button>
