@@ -1,5 +1,5 @@
 @props([
-  'variant' => 'primary'
+  'variant' => 'primary',
   'disabled' => false
 ])
 
