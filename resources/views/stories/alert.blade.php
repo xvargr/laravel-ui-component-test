@@ -7,6 +7,7 @@
         'type' => 'primary',
         'size' => 'normal',
         'dismissible' => false,
+        'centered' => false,
 
         'isolate' => false,
     ],
@@ -51,6 +52,21 @@
                 ],
             ],
         ],
+        'centered' => [
+            'control' => [
+                'type' => 'boolean',
+            ],
+            'description' => 'If the content of the alert should be justified to center',
+            'defaultValue' => false,
+            'table' => [
+                'type' => [
+                    'summary' => 'boolean',
+                ],
+                'defaultValue' => [
+                    'summary' => 'false',
+                ],
+            ],
+        ],
         'size' => [
             'options' => ['normal', 'full'],
             'control' => [
@@ -86,11 +102,21 @@
             'control' => [
                 'type' => 'boolean',
             ],
+            'description' => 'Isolate the component in a shadowDOM preventing CSS pollution',
+            'defaultValue' => 'false',
+            'table' => [
+                'type' => [
+                    'summary' => 'boolean',
+                ],
+                'defaultValue' => [
+                    'summary' => 'false',
+                ],
+            ],
         ],
     ],
 ])
 
 <x-cxs-ui-kit::alert type="{{ $type }}" heading="{{ $heading }}" size="{{ $size }}"
-    dismissible="{{ $dismissible }}" class="">
+    :dismissible="$dismissible" :centered="$centered" class="">
     {!! $message !!}
 </x-cxs-ui-kit::alert>

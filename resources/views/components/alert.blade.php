@@ -3,12 +3,14 @@
     'size' => 'normal',
     'dismissible' => false,
     'heading' => '',
+    'centered' => false,
 
     'isolate' => false,
     'containerClass' => '',
 ])
 
-<x-cxs-ui-kit::base class="csx-ui cxs-alert app-container container-xxl {{ $containerClass }}" isolate="{{ $isolate }}">
+<x-cxs-ui-kit::base class="csx-ui cxs-alert app-container container-xxl {{ $containerClass }}"
+    isolate="{{ $isolate }}">
     <div {{ $attributes->merge([
         'class' =>
             "alert alert-{$type}" .
@@ -17,10 +19,12 @@
     ]) }}
         role="alert">
         @if (!empty($heading))
-            <h4 class="alert-heading">{{ $heading }}</h4>
+            <h4 class="alert-heading {{ $centered ? 'text-center' : '' }}">{{ $heading }}</h4>
         @endif
 
-        {!! $slot !!}
+        <div class="{{ $centered ? 'text-center' : '' }}">
+            {!! $slot !!}
+        </div>
 
         @if ($dismissible)
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
