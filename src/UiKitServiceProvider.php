@@ -12,7 +12,7 @@ class UiKitServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'cxs-ui-kit');
         Blade::componentNamespace('Cxs\UiKit\Views\Components', 'cxs-ui-kit');
         $this->publishes([
-            __DIR__ . '/../resources/views/components' => resource_path('views/components/cxs-ui-kit'),
+            __DIR__ . '/../resources/views/components' => resource_path('views/components/cxs-ui-kit'), 
             __DIR__ . '/../resources/views/stories' => resource_path('views/stories/cxs-ui-kit'),
         ]);
     }
