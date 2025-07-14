@@ -1,9 +1,9 @@
 @props([
-    'isolate' => 'false',
+    'isolate' => false,
 ])
 
 <div {{ $attributes }}>
-    @if ($isolate === 'true')
+    @if ($isolate)
         <template shadowrootmode="open">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
                 crossorigin="anonymous">

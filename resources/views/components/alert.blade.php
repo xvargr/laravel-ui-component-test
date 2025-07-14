@@ -8,11 +8,11 @@
     'containerClass' => '',
 ])
 
-<x-cxs-ui-kit::base class="csx-ui cxs-alert {{ $containerClass }}" isolate="{{ $isolate }}">
+<x-cxs-ui-kit::base class="csx-ui cxs-alert app-container container-xxl {{ $containerClass }}" isolate="{{ $isolate }}">
     <div {{ $attributes->merge([
         'class' =>
             "alert alert-{$type}" .
-            ($size === 'normal' ? ' app-container container-xxl' : ' border-0 rounded-0') .
+            ($size === 'normal' ? ' ' : ' border-0 rounded-0') .
             ($dismissible ? ' alert-dismissible fade show' : ''),
     ]) }}
         role="alert">
