@@ -9,6 +9,7 @@ return [
         ],
     ],
     'colors' => [
+        'brand' => '#0d6efd',
         'primary' => '#0d6efd',
         'secondary' => '#6c757d',
         'success' => '#198754',

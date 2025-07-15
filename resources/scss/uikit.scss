@@ -1,0 +1,51 @@
+$brand:    #ffc31f;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+
+$theme-colors: map-merge(
+  (
+    "brand": $brand
+  ),
+  $theme-colors
+);
+
+$brand-colors: (
+  "brand": $brand,
+  "brand-50":  #fffbeb,
+  "brand-100": #fff5c6,
+  "brand-200": #ffe888,
+  "brand-300": #ffd74a,
+  "brand-400": $brand,
+  "brand-500": #f9a207,
+  "brand-600": #dd7902,
+  "brand-700": #b75506,
+  "brand-800": #94410c,
+  "brand-900": #7a350d,
+  "brand-950": #461b02
+);
+
+@each $name, $color in $brand-colors {
+  .bg-#{$name} {
+    background-color: #{$color} !important;
+  }
+
+  .text-#{$name} {
+    color: #{$color} !important;
+  }
+
+  .border-#{$name} {
+    border-color: #{$color} !important;
+  }
+
+  .hover\:bg-#{$name}:hover {
+    background-color: #{$color} !important;
+  }
+
+  .hover\:text-#{$name}:hover {
+    color: #{$color} !important;
+  }
+}
+
+@import "~bootstrap/scss/bootstrap";
